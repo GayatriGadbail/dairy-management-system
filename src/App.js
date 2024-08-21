@@ -1,19 +1,20 @@
-
 import './App.css';
-import About from './templates/about/About';
-import ContactUs from './templates/contactus/ContactUs';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import { BrowserRouter } from 'react-router-dom';
 import Header from './templates/header/Header';
-import Home from './templates/home/Home';
-import Login from './templates/login/Login';
+import ContactUs from './templates/contactus/ContactUs';
 
 function App() {
   return (
-    <div className="App">
-    <div><Header/></div>
-    <div><Home/></div>
-    <div><ContactUs/></div>
-    <div><About/></div>
-    <div><Login/></div>
+    <div className='App'>
+     <BrowserRouter>
+     <Header/>
+     <ContactUs/>
+
+     </BrowserRouter>
+     
+
     </div>
   );
 }
