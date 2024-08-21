@@ -1,19 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <div>
-        <div className="d-flex justify-content-around  bg-primary">
-           <h3 className="">Welcome to Dairy<br/> Management System</h3>
-           <button className='btn btn-warning btn mt-3 fs-5 p-1' >Home</button>
-           <button className='btn btn-warning btn mt-3 fs-5 p-1'>About</button>
-           <button className='btn btn-warning btn mt-3 fs-5 p-1'>ContactUs</button>
-           <button className='btn btn-warning btn mt-3 fs-5 p-1'>Review</button>
-           <button className='btn btn-warning btn mt-3 fs-5 p-1'>SignIn </button>
-          
+         <nav className="d-flex bg-primary">
+          <div className='w-50'>
+            
+           <h3 className="text-white ms-3">Welcome to Dairy<br/> Management System</h3>
            </div>
-          
-        </div>
+           <div className='w-50 text-end mt-3'>
+           <Link className='btn btn-warning  btn me-4 fs-5 p-1 ' to={'/home'} >Home</Link>
+           <Link className='btn btn-warning btn me-4 fs-5 p-1' to={'/about'}>About</Link>
+           <Link className='btn btn-warning btn me-4 fs-5 p-1' to={'/contact'}>ContactUs</Link>
+           <Link className='btn btn-warning btn me-4 fs-5 p-1' to={'/review'}>Review</Link>
+           <Link className='btn btn-warning btn me-4 fs-5 p-1' to={'/signIn'}>SignIn </Link>
+           <Link className='btn btn-warning btn me-4 fs-5 p-1' to={'/search'}><i class="bi bi-search"></i> </Link>
+           </div>
+           </nav>
+    </div>
   )
 }
 
