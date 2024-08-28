@@ -1,0 +1,49 @@
+{
+  "user": [
+    {
+      "id": "data01",
+      "firstName": "Gayatri",
+      "lastName": "Gadbail",
+      "email": "gdgadbail2003",
+      "mobileNumber": "9373673416",
+      "address": "Amravati",
+      "message": "Good"
+    },
+    {
+      "id": "7965",
+      "firstname": "Dhanashree",
+      "lastname": "Gadbail",
+      "email": "dhanandg2006@gmail.com",
+      "mobileno": "",
+      "address": "Amravati",
+      "message": "Good Service"
+    },
+    {
+      "id": "b071",
+      "firstname": "Nilu",
+      "lastname": "Lihare",
+      "email": "nilulihare123@gmail.com",
+      "mobileno": "764447899",
+      "address": "Nagpur",
+      "message": "Good Service"
+    },
+    {
+      "id": "b1eb",
+      "firstname": "Ayush",
+      "lastname": "Khatri",
+      "email": "ayushkhatri123@gmail.com",
+      "mobileno": "8219238383",
+      "address": "Pune",
+      "message": "Excellent"
+    },
+    {
+      "id": "ed85",
+      "firstname": "Tanushree",
+      "lastname": "Ugle",
+      "email": "tanuugle324@gmail.com",
+      "mobileno": "7543339877",
+      "address": "Dilhi",
+      "message": "Good Service"
+    }
+  ]
+}
