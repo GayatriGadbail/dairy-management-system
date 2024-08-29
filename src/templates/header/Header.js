@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.jpg'
 function Header() {
   return (
+
     <div>
          <nav className="d-flex bg-primary">
          <img src={logo} width={80} height={80}/> 
@@ -21,6 +22,7 @@ function Header() {
            </div>
            </nav>
     </div>
+
   )
 }
 
