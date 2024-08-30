@@ -15,7 +15,7 @@ function DashHeader() {
 
       <span className='ms-5'>
         <p className='text-white fs-3 m-0'>  {employee.firstName}</p>
-        <p className='text-white fs-5 m-0'>{employee.userType}</p> 
+        <p className='text-white  m-0'>{employee.userType}</p> 
         </span> 
        
         
