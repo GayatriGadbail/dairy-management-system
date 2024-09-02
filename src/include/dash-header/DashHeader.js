@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import './DashHeader.css'
 
 function DashHeader() {
     const[employee,setEmployee]=useState({})
@@ -11,7 +12,7 @@ function DashHeader() {
   return (
     <nav className='navbar navbar-danger bg-success'>
     <div className='d-flex ms-4 '>
-      <img src={`data:/jpeg;base64,${employee.profileImage}`} width={80} height={80}/>
+      <img src={`data:/jpeg;base64,${employee.profileImage}`} className='img'/>
 
       <span className='ms-5'>
         <p className='text-white fs-3 m-0'>  {employee.firstName}</p>
