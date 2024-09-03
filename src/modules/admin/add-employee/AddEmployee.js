@@ -3,11 +3,12 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react';
 import axios from 'axios';
 
-function AddEmployee() {
- const  {register,handleSubmit,reset} = useForm();
-  const   [employeeImage,setEmployeeImage]=useState(null);
 
-const saveEmpoyee=(employee)=>{
+function AddEmployee() {
+  const  {register,handleSubmit,reset} = useForm();
+   const   [employeeImage,setEmployeeImage]=useState(null);
+  
+  const saveEmpoyee=(employee)=>{
   console.log(employee)
 
   const formData=new FormData();
@@ -73,7 +74,7 @@ const saveEmpoyee=(employee)=>{
       </div>
 
      
-     <button className="btn btn-outline-success w-100 mt-4">Submit</button>
+     <button className="btn btn-outline-success w-75 mt-4">Submit</button>
       </form>
     </div>
   )
