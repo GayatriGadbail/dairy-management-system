@@ -14,8 +14,10 @@ function AddFarmer() {
         console.log(farmer)
 
        const formData = new FormData();
-       formData.append("farmerJson",JSON.stringify(farmer));
-       formData.append("farmerAdhar",farmerImage);
+       formData.append("farmer",JSON.stringify(farmer));
+       formData.append("adhar",farmerImage);
+       formData.append("cowImage",cowImage);
+       formData.append("buffaloImage",buffaloImage);
 
        axios.post('http://localhost:9091/InsertFarmer',formData).then(
         res=>{if(res.status===201)alert("Farmer Inserted")}
@@ -51,7 +53,7 @@ function AddFarmer() {
             </div>
             <div className='mt-2'>
             <label className='text-white fs-5' htmlFor='age'>Enter Farmer Age</label>
-            <input type='text' className='form-control' id='age' {...register('age')}/>
+            <input type='number' className='form-control' id='age' {...register('age')}/>
             </div>
             <div className='mt-2'>
             <label className='text-white fs-5' htmlFor='mail'>Enter Farmer Email</label>
@@ -59,57 +61,57 @@ function AddFarmer() {
             </div>
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='adhar'>Upload Adhar card</label>
-                <input type='file' className='form-control' id='adhar' {...register('adhar')} onClick={e=>UploadFarmerImage(e)}/>
+                <input type='file' className='form-control' id='adhar'  onClick={e=>UploadFarmerImage(e)}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='cb'>Enter cow bread</label>
-                <input type='text' className='form-control' id='cb' {...register('CowDetails.cowBreed')}/>
+                <input type='text' className='form-control' id='cb' {...register('cow[0].cowBreed')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='cage'>Enter cow Age</label>
-                <input type='text' className='form-control' id='cage' {...register('CowDetails.cowAge')}/>
+                <input type='number' className='form-control' id='cage' {...register('cow[0].cowAge')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='cno'>Enter cow Number</label>
-                <input type='text' className='form-control' id='cno' {...register('CowDetails.cowNumber')}/>
+                <input type='number' className='form-control' id='cno' {...register('cow[0].cowNumber')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='cmilk'>Average milk quantity</label>
-                <input type='text' className='form-control' id='cmilk' {...register('CowDetails.averageMilkQuantity')}/>
+                <input type='number' className='form-control' id='cmilk' {...register('cow[0].averageMilkQuantity')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='cimage'>Upload cow Image</label>
-                <input type='file' className='form-control' id='cimage' {...register('CowDetails.cowImage')} onClick={e=>UploadCowImage(e)}/>
+                <input type='file' className='form-control' id='cimage'  onClick={e=>UploadCowImage(e)}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='bb'>Enter buffalo bread</label>
-                <input type='text' className='form-control' id='bb' {...register('BuffaloDetails.buffaloBread')}/>
+                <input type='text' className='form-control' id='bb' {...register('buffalo[0].buffaloBreed')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='bage'>Enter buffalo Age</label>
-                <input type='text' className='form-control' id='bage' {...register('BuffaloDetails.buffaloAge')}/>
+                <input type='number' className='form-control' id='bage' {...register('buffalo[0].buffaloAge')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='bno'>Enter buffalo Number</label>
-                <input type='text' className='form-control' id='bno' {...register('BuffaloDetails.buffaloNumber')}/>
+                <input type='text' className='form-control' id='bno' {...register('buffalo[0].buffaloNumber')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='bmilk'>Average milk quantity</label>
-                <input type='text' className='form-control' id='bmilk' {...register('BuffaloDetails.averageMilkQuantity')}/>
+                <input type='number' className='form-control' id='bmilk' {...register('buffalo[0].averageMilkQuantity')}/>
             </div>
 
             <div className='mt-2'>
                 <label className='text-white fs-5' htmlFor='bimage'> Upload buffalo Image</label>
-                <input type='file' className='form-control' id='bimage' {...register('BuffaloDetails.buffaloImage')} onClick={e=>UploadBuffaloImage(e)}/>
+                <input type='file' className='form-control' id='bimage'  onClick={e=>UploadBuffaloImage(e)}/>
             </div>
 
 
